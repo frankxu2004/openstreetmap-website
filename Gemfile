@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Require rails
-gem "rails", "4.2.4"
+gem "rails", "4.2.5"
 
 # Require things which have moved to gems in ruby 1.9
 gem "bigdecimal", "~> 1.1.0", :platforms => :ruby_19
@@ -38,7 +38,7 @@ gem "r2"
 gem "autoprefixer-rails"
 
 # Use image_optim to optimise images
-gem "image_optim"
+gem "image_optim", ">= 0.22.0"
 
 # Load rails plugins
 gem "rails-i18n", "~> 4.0.0"
