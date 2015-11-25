@@ -1,10 +1,23 @@
 <% if defined? ID_KEY %>
+  <div id='predictor'>
+    <label for="price">Price: </label>
+    <input type="text" name="price" id="price"/>
+    <label for="time">Time: </label>
+    <input type="text" name="time" id="time"/>
+    <label for="weather">Weather: </label>
+    <select name="time" id="time">
+      <option value="sunny">Sunny</option>
+      <option value="cloudy">Cloudy</option>
+      <option value="shower">Shower</option>
+      <option value="rainy">Rainy</option>
+    </select>
+    <button id="predict-button">Predict</button>
+  </div>
   <div id="map">
     <iframe frameBorder="0" id="id-embed" class="id-embed" allowfullscreen></iframe>
   </div>
   <script>
     var params = {};
-
     var mapParams = OSM.mapParams();
     if (mapParams.object) {
       params.id = mapParams.object.type[0] + mapParams.object.id;
@@ -39,7 +52,72 @@
 <% end -%>
 
     $('#id-embed').attr('src', '<%= id_url :locale => params[:locale] %>#' + querystring.stringify(params));
-  </script>
+
+    Math.sinh = Math.sinh || function(x) {
+          return (Math.exp(x) - Math.exp(-x)) / 2;
+        };
+
+    function rad2deg(rad)
+    {
+      return rad*(180/Math.PI);
+    }
+
+    function deg2rad(deg)
+    {
+      return deg * (Math.PI/180);
+    }
+
+    function getTileNumber(lat, lon, zoom) {
+      var xtile = Math.floor((lon+180)/360 * Math.pow(2, zoom));
+      var ytile = Math.floor((1 - Math.log(Math.tan(deg2rad(lat)) + 1/Math.cos(deg2rad(lat)))/Math.PI)/2 * Math.pow(2, zoom));
+      return [xtile, ytile];
+    }
+
+    function getLonLat(xtile, ytile, zoom) {
+      var n = Math.pow(2, zoom);
+      var lon_deg = xtile / n * 360.0 - 180.0;
+      var lat_deg = rad2deg(Math.atan(Math.sinh(Math.PI * (1 - 2 * ytile / n))));
+      return [lon_deg, lat_deg];
+    }
+
+    function LonLat_to_bbox(width, height, lat, lon, zoom) {
+      var tile_size = 256;
+      var xytile = getTileNumber(lat, lon, zoom);
+      var xtile = xytile[0];
+      var ytile = xytile[1];
+
+      var xtile_s = (xtile * tile_size - width/2) / tile_size;
+      var ytile_s = (ytile * tile_size - height/2) / tile_size;
+      var xtile_e = (xtile * tile_size + width/2) / tile_size;
+      var ytile_e = (ytile * tile_size + height/2) / tile_size;
+
+      var lonlat_s = getLonLat(xtile_s, ytile_s, zoom);
+      var lonlat_e = getLonLat(xtile_e, ytile_e, zoom);
+      var lon_s = lonlat_s[0];
+      var lat_s = lonlat_s[1];
+      var lon_e = lonlat_e[0];
+      var lat_e = lonlat_e[1];
+      return [lon_s, lat_s, lon_e, lat_e];
+    }
+
+    $('#predict-button').on('click', function(){
+      var iframe = $('.id-embed').contents();
+      if (iframe.find('.save disabled').length > 0) {
+        alert('Pending changes, please Save or Undo changes first!');
+      }
+      else {
+        var hash = window.location.hash;
+        var parse_location = hash.split('map=')[1].split('/');
+        var zoom = parseFloat(parse_location[0]);
+        var lat = parseFloat(parse_location[1]);
+        var lon = parseFloat(parse_location[2]);
+        var width = iframe.find('#map').width();
+        var height = iframe.find('#map').height();
+        var bbox = LonLat_to_bbox(width, height, lat, lon, zoom);
+        console.log(bbox);
+      }
+    });
+    </script>
 <% else %>
   <script type="text/javascript">alert("<%= t 'site.edit.id_not_configured' %>")</script>
 <% end %>
