@@ -2,10 +2,19 @@
   <div id='predictor'>
     <label for="price">Price: </label>
     <input type="text" name="price" id="price"/>
-    <label for="time">Time: </label>
-    <input type="text" name="time" id="time"/>
+    <label for="hour">Hour: </label>
+    <input type="text" name="hour" id="hour"/>
+    <label for="day_temp">Day Temp: </label>
+    <input type="text" name="day_temp" id="day_temp"/>
+    <label for="night_temp">Night Temp: </label>
+    <input type="text" name="night_temp" id="night_temp"/>
+    <label for="is_weekend">Is Weekend? </label>
+    <select name="is_weekend" id="is_weekend">
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+    </select>
     <label for="weather">Weather: </label>
-    <select name="time" id="time">
+    <select name="weather" id="weather">
       <option value="sunny">Sunny</option>
       <option value="cloudy">Cloudy</option>
       <option value="shower">Shower</option>
@@ -97,7 +106,7 @@
       var lat_s = lonlat_s[1];
       var lon_e = lonlat_e[0];
       var lat_e = lonlat_e[1];
-      return [lon_s, lat_s, lon_e, lat_e];
+      return [lon_s, lat_e, lon_e, lat_s];
     }
 
     $('#predict-button').on('click', function(){
@@ -114,7 +123,21 @@
         var width = iframe.find('#map').width();
         var height = iframe.find('#map').height();
         var bbox = LonLat_to_bbox(width, height, lat, lon, zoom);
-        console.log(bbox);
+        var payload = {
+          x1: bbox[0],
+          y1: bbox[1],
+          x2: bbox[2],
+          y2: bbox[3],
+          price: $('#price').val(),
+          hour: $('#hour').val(),
+          day_temp: $('#day_temp').val(),
+          night_temp: $('#night_temp').val(),
+          is_weekend: $('#is_weekend').val(),
+          weather: $('#weather').val()
+        };
+        var param_str = $.param(payload);
+        var url = 'http://202.120.58.116/traffic/prediction?' + param_str;
+        window.open(url);
       }
     });
     </script>
