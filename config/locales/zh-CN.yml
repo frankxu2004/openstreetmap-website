@@ -1680,8 +1680,7 @@ zh-CN:
     new:
       title: 注册
       no_auto_account_create: 很遗憾，我们目前无法为您自动创建一个帐户。
-      contact_webmaster: 请联系<a href="mailto:webmaster@openstreetmap.org">网站管理员</a>来安排创建一个账户
-        - 我们将尽快尝试处理您的请求。
+      contact_webmaster: 请联系<a href="%{webmaster}">网站管理员</a>来安排创建一个账户 - 我们将尽快尝试处理您的请求。
       about:
         header: 自由且可编辑
         html: |-
@@ -1775,12 +1774,12 @@ zh-CN:
         revoke:
           administrator: 撤销管理员权限
           moderator: 撤销管理员权限
-      block_history: 接受的封禁
+      block_history: 激活的封禁
       moderator_history: 执行封禁者
       comments: 评论
-      create_block: 阻止此用户
-      activate_user: 启用该用户
-      deactivate_user: 停用该用户
+      create_block: 封禁此用户
+      activate_user: 启用此用户
+      deactivate_user: 停用此用户
       confirm_user: 确认此用户
       hide_user: 隐藏此用户
       unhide_user: 取消隐藏此用户
@@ -1857,8 +1856,7 @@ zh-CN:
       unknown token: 确认码已经过期或不存在。
       reconfirm_html: 如果您需要我们重新发送确认邮件，<a href="%{reconfirm}">请点击这里</a>。
     confirm_resend:
-      success: 我们已经发送一封新的确认电子邮件到 %{email}，只要您确认您的帐户，您就可以开始制图了。<br /><br />如果您使用的反垃圾邮件系统发送确认请求，那么请确保您的白名单中有
-        webmaster@openstreetmap.org，因为我们无法回复任何确认请求。
+      success: 我们已经发送一封新的确认电子邮件到 %{email}，只要您确认您的帐户，您就可以开始制图了。<br /><br />如果您使用的反垃圾邮件系统发送确认请求，那么请确保您的白名单中有%{sender}，因为我们无法回复任何确认请求。
       failure: 用户 %{name} 未找到。
     confirm_email:
       heading: 确认电子邮件地址修改
@@ -2082,6 +2080,9 @@ zh-CN:
       center_marker: 以标记作为地图中心
       paste_html: 粘贴HTML以嵌入网站
       view_larger_map: 查看更大的地图
+      only_standard_layer: 只有标准图层可被导出为图片
+    embed:
+      report_problem: 报告问题
     key:
       title: 图例
       tooltip: 图例

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: phpyaml
 # Author: J budissin
+# Author: Macofe
 # Author: Michawiki
 # Author: Mikławš
 ---
@@ -217,7 +218,7 @@ hsb:
   changeset:
     changeset_paging_nav:
       showing_page: Strona %{page}
-      next: Přichodna »
+      next: Dale »
       previous: « Předchadna
     changeset:
       anonymous: Anonymny
@@ -1159,7 +1160,7 @@ hsb:
       title: wiki.openstreetmap.org
       description: Přepytaj wiki za nadrobnej OSM-dokumentaciju
   about_page:
-    next: Přichodna
+    next: Dale
     copyright_html: <span>&copy; </span>sobuskutkowacy<br>OpenStreetMap
     used_by: '%{name} staja kartowe daty za sta websydłow, mobilne nałoženja a graty
       k dispoziciji'
@@ -1780,8 +1781,8 @@ hsb:
       title: Registrować
       no_auto_account_create: Bohužel njemóžemy tuchwilu žane konto za tebje awtomatisce
         załožić.
-      contact_webmaster: Prošu staj so z <a href="mailto:webmaster@openstreetmap.org">webmasterom</a>
-        do zwiska, zo by so konto załožiło - budźemy pospytać naprašowanje tak spěšnje
+      contact_webmaster: Prošu staj so z <a href="%{webmaster}">webmasterom</a> do
+        zwiska, zo by so konto załožiło - budźemy pospytać naprašowanje tak spěšnje
         kaž móžno wobdźěłać.
       about:
         header: Swobodny a wobdźěłujomny
@@ -1979,7 +1980,7 @@ hsb:
     confirm_resend:
       success: Smy nowu wobkrućenski e-mejl na %{email} póslali a tak ruče hač swoje
         konto wobkrućiš, móžeš kartěrowanje započeć.<br /><br /> Jeli přećiwospamowy
-        system wužiwaš, kotryž wobkrućenske naprašowanja sćele, přewzmi adresu webmaster@openstreetmap.org
+        system wužiwaš, kotryž wobkrućenske naprašowanja sćele, přewzmi adresu %{sender}
         do swojeje běłeje lisćiny, dokelž njemóžemy na wobkrućenske naprašowanja wotmołwić.
       failure: Wužiwar %{name} njenamakany.
     confirm_email:

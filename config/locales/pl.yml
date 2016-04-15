@@ -16,6 +16,7 @@
 # Author: Ireun
 # Author: Kaligula
 # Author: Kocio
+# Author: Macofe
 # Author: Maraf24
 # Author: Mateon1
 # Author: Nemo bis
@@ -26,9 +27,11 @@
 # Author: RafalR
 # Author: Rezonansowy
 # Author: RicoElectrico
+# Author: Rmikke
 # Author: Ruila
 # Author: Soeb
 # Author: Sp5uhe
+# Author: Teiron
 # Author: The Polish
 # Author: Ty221
 # Author: Woytecr
@@ -39,7 +42,7 @@
 pl:
   time:
     formats:
-      friendly: '%e %B %Y o %H:%M'
+      friendly: '%Y-%m-%d o %H:%M'
   activerecord:
     models:
       acl: Lista kontroli dostępu
@@ -1106,7 +1109,8 @@ pl:
       trademarks_title_html: <span id="trademarks"></span>Znaki towarowe
       trademarks_1_html: OpenStreetMap i jej logo są zastrzeżonymi znakami towarowymi
         fundacji OpenStreetMap. Jeśli masz pytania dotyczące używania znaków, prosimy,
-        prześlij Swoje pytania do <a href="http://wiki.osmfoundation.org/wiki/Licensing_Working_Group">grupie
+        prz<a href="http://wiki.osmfoundation.org/wiki/Licensing_Working_Group"></a>eślij
+        Swoje pytania do <a href="http://wiki.osmfoundation.org/wiki/Licensing_Working_Group">grupy
         roboczej ds. licencji</a>.
   welcome_page:
     title: Witaj!
@@ -1220,7 +1224,7 @@ pl:
       ścieżkach, kawiarniach, dworcach i wielu innych, na całym świecie.
     local_knowledge_title: Wiedza lokalna
     local_knowledge_html: OpenStreetMap wyróżnia wiedzę lokalną. Członkowie używają
-      zdjęć satelitarnych, lotniczych, nawigacji GPS, i zwykłych map abyzweryfikować
+      zdjęć satelitarnych, lotniczych, nawigacji GPS, i zwykłych map aby zweryfikować
       czy dane w OSM są dokładne i aktualne.
     community_driven_title: Kontrolowany przez społeczność
     community_driven_html: |-
@@ -1845,7 +1849,7 @@ pl:
     new:
       title: Zarejestruj się
       no_auto_account_create: Niestety nie możemy aktualnie stworzyć Ci konta automatycznie.
-      contact_webmaster: Skontaktuj się proszę się z <a href="mailto:webmaster@openstreetmap.org">webmasterem</a>,
+      contact_webmaster: Skontaktuj się proszę się z <a href="%{webmaster}">webmasterem</a>,
         aby utworzyć konto. Postaramy się zająć się Twoją prośbą tak szybko, jak to
         będzie możliwe.
       about:
@@ -1899,6 +1903,7 @@ pl:
       heading: Użytkownik %{user} nie istnieje
       body: Niestety nie znaleziono użytkownika o nazwie %{user}, sprawdź pisownię.  Być
         może skorzystano z nieprawidłowego odnośnika.
+      deleted: usunięty
     view:
       my diary: mój dziennik
       new diary entry: nowy wpis w dzienniku
@@ -1951,16 +1956,16 @@ pl:
         revoke:
           administrator: Cofnij dostęp administratora
           moderator: Cofnij dostęp moderatora
-      block_history: otrzymane blokady
-      moderator_history: nałożone blokady
+      block_history: Aktywne Blokady
+      moderator_history: Nałożone Blokady
       comments: komentarze
-      create_block: zablokuj tego użytkownika
-      activate_user: aktywuj tego użytkownika
-      deactivate_user: dezaktywuj tego użytkownika
-      confirm_user: zatwierdź tego użytkownika
-      hide_user: ukryj tego użytkownika
-      unhide_user: odkryj tego użytkownika
-      delete_user: usuń to konto
+      create_block: Zablokuj tego użytkownika
+      activate_user: Aktywuj tego użytkownika
+      deactivate_user: Dezaktywuj tego użytkownika
+      confirm_user: Zatwierdź tego użytkownika
+      hide_user: Ukryj tego użytkownika
+      unhide_user: Odkryj tego użytkownika
+      delete_user: Usuń tego użytkownika
       confirm: Potwierdź
       friends_changesets: zestawy zmian znajomych
       friends_diaries: wpisy w dziennikach znajomych
@@ -2046,8 +2051,7 @@ pl:
       success: Wysłaliśmy nową wiadomość z potwierdzeniem na %{email} i jak tylko
         aktywujesz swoje konto, będziesz mógł zacząć edytować mapę.<br /><br />Jeśli
         używasz systemu antyspamowego, upewnij się, że do swojej białej listy dodałeś
-        adres webmaster@openstreetmap.org. Dzięki temu będziemy mogli skontaktować
-        się z tobą bez problemów.
+        adres %{sender}. Dzięki temu będziemy mogli skontaktować się z tobą bez problemów.
       failure: Brak użytkownika %{name}.
     confirm_email:
       heading: Porwierdzenie zmiany adresu mailowego
@@ -2293,6 +2297,9 @@ pl:
       center_marker: Wyśrodkuj mapę na znaczniku
       paste_html: Wklej podany kod HTML do swojej strony
       view_larger_map: Wyświetl większą mapę
+      only_standard_layer: Tylko warstwa standardowa może być eksportowana jako obraz
+    embed:
+      report_problem: Zgłoś błąd
     key:
       title: Legenda
       tooltip: Legenda

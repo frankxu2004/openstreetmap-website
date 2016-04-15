@@ -12,6 +12,7 @@
 # Author: Kiriakos
 # Author: Kongr43gpen
 # Author: Logictheo
+# Author: Macofe
 # Author: Omnipaedista
 # Author: Protnet
 # Author: Ruila
@@ -638,6 +639,8 @@ el:
           wayside_cross: Σταυρός στην άκρη του δρόμου
           wayside_shrine: Εικονοστάσιο στην άκρη του δρόμου
           wreck: Ναυάγιο
+        junction:
+          "yes": Διασταύρωση
         landuse:
           allotments: Λαχανόκηποι
           basin: Λεκανοπέδιο
@@ -765,6 +768,7 @@ el:
           travel_agent: Ταξιδιωτικό πρακτορείο
           "yes": Γραφείο
         place:
+          allotments: Λαχανόκηποι
           airport: Αεροδρόμιο
           city: Πόλη
           country: Χώρα
@@ -1777,7 +1781,7 @@ el:
       title: Εγγραφή
       no_auto_account_create: Δυστυχώς δεν μπορούμε να δημιουργήσουμε αυτόματα έναν
         λογαριασμό για εσάς.
-      contact_webmaster: Επικοινωνήστε με τον <a href="mailto:webmaster@openstreetmap.org">webmaster</a>
+      contact_webmaster: Επικοινωνήστε με τον <a href="%{webmaster}">webmaster</a>
         για να κανονίσετε για τη δημιουργία ενός λογαριασμού - θα προσπαθήσουμε να
         ικανοποιήσουμε το αίτημά σας το συντομότερο δυνατόν.
       about:
@@ -1880,16 +1884,16 @@ el:
         revoke:
           administrator: Ανακαλέστε πρόσβαση διαχειριστή
           moderator: Ανακαλέστε πρόσβαση συντονιστή
-      block_history: φραγές που ελήφθησαν
-      moderator_history: φραγές που επιβλήθηκαν
+      block_history: Ενεργή Φραγές
+      moderator_history: Φραγές που Επιβλήθηκαν
       comments: Σχόλια
-      create_block: φραγή αυτού του χρήστη
-      activate_user: ενεργοποίηση αυτού του χρήστη
-      deactivate_user: απενεργοποίηση αυτού του χρήστη
-      confirm_user: επιβεβαίωση αυτού του χρήστη
-      hide_user: απόκρυψη αυτού του χρήστη
-      unhide_user: επανεμφάνιση αυτού του χρήστη
-      delete_user: διαγραφή αυτού του χρήστη
+      create_block: Φραγή αυτού του Χρήστη
+      activate_user: Ενεργοποίηση αυτού του λογαριασμού Χρήστη
+      deactivate_user: Απενεργοποίηση αυτού του λογαριασμού Χρήστη
+      confirm_user: Επιβεβαίωση αυτού του λογαριασμού Χρήστη
+      hide_user: Απόκρυψη αυτού του λογαριασμού Χρήστη
+      unhide_user: Επανεμφάνιση αυτού του λογαριασμού Χρήστη
+      delete_user: Διαγραφή αυτού του Χρήστη
       confirm: Επιβεβαίωση
       friends_changesets: ομάδες αλλαγών φίλων
       friends_diaries: καταχωρήσεις ημερολογίου φίλων
@@ -2241,6 +2245,9 @@ el:
         mapquest_car: Αυτοκίνητο (MapQuest)
         mapquest_foot: Με τα πόδια (MapQuest)
         osrm_car: Αυτοκίνητο (OSRM)
+        mapzen_bicycle: Ποδήλατο (Mapzen)
+        mapzen_car: Αυτοκίνητο (Mapzen)
+        mapzen_foot: Πόδι (Mapzen)
       directions: Οδηγίες
       distance: Απόσταση
       errors:
@@ -2266,6 +2273,7 @@ el:
         roundabout_with_exit: Στην κυκλική διασταύρωση, πάρτε την έξοδο %{exit} προς
           %{name}
         unnamed: ανώνυμος δρόμος
+        courtesy: Οι οδηγίες είναι προσφορά του %{link}
       time: Διάρκεια
     query:
       node: Κόμβος

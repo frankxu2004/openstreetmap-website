@@ -10,6 +10,7 @@
 # Author: Grin
 # Author: Kempelen
 # Author: Leiric
+# Author: Macofe
 # Author: Misibacsi
 # Author: Máté
 # Author: Nemo bis
@@ -378,7 +379,7 @@ hu:
       format: 'Formátum:'
       scale: Méretarány
       max: max.
-      image_size: 'Képméret:'
+      image_size: Képméret
       zoom: Nagyítási szint
       add_marker: Jelölő hozzáadása a térképhez
       latitude: 'Földrajzi szélesség:'
@@ -1110,6 +1111,12 @@ hu:
         mint például egy étterem neve vagy egy sebességkorlátozás mértéke.
     rules:
       title: Szabályok!
+      paragraph_1_html: "Az openStreetMap-nek van néhány formális szabálya is de alapvetően
+        minden résztvevőtől azt várjuk el hogy együttműködjön és kommunikáljon a közösség
+        többi tagjával. Ha bármilyen kézi szerkesztésen túlmutató tevékenységet tervezel
+        akkor kérjük, hogy olvasd el az erről szóló útmutatókat az \n<a href='http://wiki.openstreetmap.org/wiki/Import/Guidelines'>Importálásról</a>
+        és az \n<a href='http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct'>Automatikus
+        szerkesztésekről</a> szóló lapokon."
     questions:
       title: Kérdésed van?
       paragraph_1_html: Az OpenStreetMap számos anyagot kínál fel ahhoz, hogy ismerkedj
@@ -1577,7 +1584,8 @@ hu:
     georss:
       title: OpenStreetMap GPS nyomvonalak
     description:
-      description_with_count: GPX fájl %{count} ponttal %{user} felhasználótól
+      description_with_count:
+        other: GPX fájl %{count} ponttal %{user} felhasználótól
       description_without_count: GPX fájl %{user} felhasználótól
   application:
     require_cookies:
@@ -1753,7 +1761,7 @@ hu:
       title: Felhasználói fiók létrehozása
       no_auto_account_create: Sajnos jelenleg nem tudunk neked létrehozni automatikusan
         egy felhasználói fiókot.
-      contact_webmaster: Kérlek fordulj a <a href="mailto:webmaster@openstreetmap.org">webmesterhez</a>
+      contact_webmaster: Kérlek fordulj a <a href="%{webmaster}">webmesterhez</a>
         (angolul), hogy lehetővé tegye felhasználói fiók létrehozását - mi igyekszünk
         olyan gyorsan foglalkozni a kéréssel, amilyen gyorsan csak lehet.
       about:
@@ -1953,8 +1961,8 @@ hu:
       success: Elküldtünk egy új megerősítő üzenetet a(z) %{email} címre, és amint
         megerősíted a felhasználói fiókodat, hozzákezdhetsz a térképezéshez.<br /><br
         />Ha használsz olyan antispam rendszert, amely megerősítési kérelmeket küld,
-        akkor győződj meg róla, hogy engedélylistára tetted a webmaster@openstreetmap.org
-        címet, mivel nem tudunk válaszolni megerősítési kérelmekre.
+        akkor győződj meg róla, hogy engedélylistára tetted a %{sender} címet, mivel
+        nem tudunk válaszolni megerősítési kérelmekre.
       failure: '%{name} felhasználó nem található.'
     confirm_email:
       heading: E-mail cím módosításának megerősítése

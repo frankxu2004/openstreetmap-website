@@ -3,6 +3,7 @@
 # Export driver: phpyaml
 # Author: Ali1
 # Author: Aude
+# Author: Ayatun
 # Author: Bassem JARKAS
 # Author: Fahad
 # Author: Faris knight
@@ -447,6 +448,7 @@ ar:
           food_court: مطعم وجبات سريعة
           fountain: نافورة
           fuel: وقود
+          gambling: مقامرة
           grave_yard: مقبرة
           gym: مركز للرشاقة/الرياضة
           health_centre: مركز صحي
@@ -1477,6 +1479,8 @@ ar:
       new diary entry: مدخلة يومية جديدة
       my edits: المُساهمات
       my traces: آثاري
+      my messages: رسائلي
+      my profile: ملفي الشخصي
       my settings: الإعدادات
       my comments: التعليقات
       oauth settings: "\uFEFFإعدادات oauth"
@@ -1758,7 +1762,21 @@ ar:
       title: شارك
       cancel: ألغ
       image: صورة
+      format: 'التنسيق:'
+      scale: 'المقياس:'
+      download: نزل
+      only_standard_layer: يمكن استيراد الطبقة القياسية فقط كصورة
+    embed:
+      report_problem: أبلغ عن مشكلة
+    key:
+      title: مفتاح الخريطة
+      tooltip: مفتاح الخريطة
     map:
+      zoom:
+        in: قرب
+        out: بعد
+      locate:
+        title: أظهر موقعي
       base:
         cycle_map: خريطة للدراجات
         transport_map: خريطة تنقلات

@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: phpyaml
 # Author: Cedric31
+# Author: Macofe
 ---
 oc:
   time:
@@ -1615,8 +1616,8 @@ oc:
       flash token bad: Avètz pas trobat aqueste geton, avètz verificat l'URL ?
     new:
       title: S’inscriure
-      contact_webmaster: Contactatz lo <a href='mailto:webmaster@openstreetmap.org'>webmaster</a>
-        per que vos crèe un compte - ensajarem de tractar vòstra demanda lo mai rapidament
+      contact_webmaster: Contactatz lo <a href="%{webmaster}">webmaster</a> per que
+        vos crèe un compte - ensajarem de tractar vòstra demanda lo mai rapidament
         possible.
       about:
         header: Liure e modificable
@@ -1700,7 +1701,7 @@ oc:
       create_block: blocar aqueste utilizaire
       activate_user: activar aqueste utilizaire
       deactivate_user: desactivar aqueste utilizaire
-      confirm_user: confirmar aqueste utilizaire
+      confirm_user: Confirmar aqueste utilizaire
       hide_user: amagar aqueste utilizaire
       unhide_user: reafichar aqueste utilizaire
       delete_user: suprimir aqueste utilizaire

@@ -4,6 +4,7 @@
 # Author: Alex73
 # Author: Goshaproject
 # Author: Jim-by
+# Author: Macofe
 # Author: Unomano
 # Author: Дзяніс Тутэйшы
 # Author: Тест
@@ -24,29 +25,29 @@ be:
       friend: Сябар
       language: Мова
       message: Паведамленне
-      node: Кропка
-      node_tag: Тэг кропкі
+      node: Пункт
+      node_tag: Тэг пункта
       notifier: Абвяшчэнне
-      old_node: Старая кропка
-      old_node_tag: Стары тэг кропкі
-      old_relation: Старыя адносіны
-      old_relation_member: Стары ўдзельнік адносін
-      old_relation_tag: Стары тэг адносін
+      old_node: Стары пункт
+      old_node_tag: Стары тэг пункта
+      old_relation: Старое дачыненне
+      old_relation_member: Стары ўдзельнік дачынення
+      old_relation_tag: Стары тэг дачынення
       old_way: Старая лінія
-      old_way_node: Старая кропка лініі
+      old_way_node: Стары пункт лініі
       old_way_tag: Стары тэг лініі
-      relation: Адносіны
-      relation_member: Удзельнік адносін
-      relation_tag: Тэг адносін
+      relation: Дачыненне
+      relation_member: Удзельнік дачынення
+      relation_tag: Тэг дачынення
       session: Сеанс
       trace: След
-      tracepoint: Кропка следу
+      tracepoint: Пункт следу
       tracetag: Тэг следу
       user: Карыстальнік
       user_preference: Налады карыстальніка
       user_token: Токен карыстальніка
       way: Лінія
-      way_node: Кропка лініі
+      way_node: Пункт лініі
       way_tag: Тэг лініі
     attributes:
       diary_comment:
@@ -116,12 +117,12 @@ be:
     changeset:
       title: 'Набор змен: %{id}'
       belongs_to: Аўтар
-      node: Кропкі (%{count})
-      node_paginated: Кропкі (%{x}-%{y} з %{count})
+      node: Пункты (%{count})
+      node_paginated: Пункты (%{x}-%{y} з %{count})
       way: Лініі (%{count})
       way_paginated: Лініі (%{x}-%{y} з %{count})
-      relation: Адносіны (%{count})
-      relation_paginated: Адносіны (%{x}-%{y} з %{count})
+      relation: Дачыненні (%{count})
+      relation_paginated: Дачыненні (%{x}-%{y} з %{count})
       comment: Каментары (%{count})
       hidden_commented_by: Схаваны каментар ад %{user} <abbr title='%{exact_time}'>%{when}
         таму</abbr>
@@ -134,51 +135,53 @@ be:
       join_discussion: Увайдзіце ў сістэму, каб далучыцца да абмеркавання
       discussion: Абмеркаванне
     node:
-      title: 'Кропка: %{name}'
-      history_title: 'Гісторыя кропкі: %{name}'
+      title: 'Пункт: %{name}'
+      history_title: 'Гісторыя пункта: %{name}'
     way:
       title: 'Лінія: %{name}'
       history_title: 'Гісторыя лініі: %{name}'
-      nodes: Кропкі
+      nodes: Пункты
       also_part_of:
         one: частка лініі %{related_ways}
         other: частка ліній %{related_ways}
     relation:
-      title: 'Адносіны: %{name}'
-      history_title: 'Гісторыя адносін: %{name}'
+      title: 'Дачыненне: %{name}'
+      history_title: 'Гісторыя дачынення: %{name}'
       members: Удзельнікі
     relation_member:
       entry_role: '%{type} %{name} як %{role}'
       type:
-        node: Кропка
+        node: Пункт
         way: Лінія
-        relation: Адносіны
+        relation: Дачыненне
     containing_relation:
-      entry: Адносіны %{relation_name}
-      entry_role: Адносіны %{relation_name} (як %{relation_role})
+      entry: Дачыненне %{relation_name}
+      entry_role: Дачыненне %{relation_name} (як %{relation_role})
     not_found:
       sorry: Прабачце, %{type} з нумарам %{id} не знойдзены.
       type:
-        node: кропка
+        node: пункт
         way: лінія
-        relation: адносіны
+        relation: дачыненне
         changeset: набор змен
+        note: заўвага
     timeout:
       sorry: Прабачце, дадзеныя для %{type} з ідэнтыфікатарам %{id} занадта доўгія
         для атрымання.
       type:
-        node: кропка
+        node: пункт
         way: лінія
-        relation: адносіны
+        relation: дачыненне
         changeset: набор змен
+        note: заўвага
     redacted:
       redaction: Рэдакцыя %{id}
       message_html: Версія %{version} гэтай %{type} не можа быць паказаная, бо яна
         была адрэдагаваная. Глядзіце %{redaction_link} для падрабязнасцяў.
       type:
-        node: кропка
+        node: пункт
         way: лінія
-        relation: адносіны
+        relation: дачыненне
     start_rjs:
       feature_warning: Неабходна загрузіць %{num_features} аб'ектаў, што можа запаволіць
         ваш браўзэр. Вы ўпэўнены, што жадаеце праглядзець гэтыя дадзеныя?
@@ -257,6 +260,7 @@ be:
   diary_entry:
     new:
       title: Новы запіс дзённіку
+      publish_button: Апублікаваць
     list:
       title: Дзённікі карыстальнікаў
       title_friends: Дзённікі сяброў
@@ -264,7 +268,7 @@ be:
       user_title: Дзённік %{user}
       in_language_title: Дзённік запісаў у %{language}
       new: Новы запіс дзённіку
-      new_title: Новы запіс для вашага дзённіку
+      new_title: Напісаць у вашым дзённіку
       no_entries: Няма запісаў
       recent_entries: Нядаўнія запісы ў дзённіку
       older_entries: Старэйшыя запісы
@@ -404,7 +408,7 @@ be:
           aerodrome: Аэрадром
           apron: Перон
           gate: Вароты
-          helipad: Верталетная пляцоўка
+          helipad: Верталётная пляцоўка
           runway: Узлётна-пасадачная паласа
           taxiway: Рулёжныя дарожкі
           terminal: Тэрмінал
@@ -1103,12 +1107,12 @@ be:
         слоў, якія могуць быць карыснымі.
       editor_html: <Strong>Рэдактар</strong> - гэта праграма або вэб-сайт, які вы
         можаце выкарыстоўваць для рэдагавання карты.
-      node_html: <Strong>Кропка (node)</strong> - гэта пункт на карце, напрыклад,
-        рэстаран ці дрэва.
+      node_html: <Strong>Пункт (node)</strong> - гэта пункт на карце, напрыклад, рэстаран
+        ці дрэва.
       way_html: <Strong>Лінія (way)</strong> - гэта лінія або многавугольнік, напрыклад,
         дарогі, рэкі, азёры або будынкі.
       tag_html: |-
-        <strong>Тэг (tag)</strong> - гэта элемент апісання кропкі або лініі, напрыклад,
+        <strong>Тэг (tag)</strong> - гэта элемент апісання пункта або лініі, напрыклад,
         назва рэстарана або абмежаванне хуткасці на дарозе.
     rules:
       title: Правілы!
@@ -1429,7 +1433,7 @@ be:
         Flash-плэер з Adobe.com</a>. Існуюць і <a href="http://wiki.openstreetmap.org/wiki/Editing">іншыя
         магчымасці</a> для рэдагавання OpenStreetMap.
       potlatch_unsaved_changes: Маюцца незахаваныя змены. (Для захавання ў Potlatch
-        зніміце вылучэнне з лініі або кропкі, калі рэдагуеце ў «жывым» рэжыме, альбо
+        зніміце вылучэнне з лініі або пункта, калі рэдагуеце ў «жывым» рэжыме, альбо
         націсніце кнопку «захаваць», калі вы ў рэжыме адкладзенага захавання.)
       potlatch2_not_configured: Potlatch 2 не быў наладжаны. Калі ласка, паглядзіце
         http://wiki.openstreetmap.org/wiki/The_Rails_Port
@@ -1453,6 +1457,7 @@ be:
       table:
         entry:
           motorway: Аўтамагістраль
+          main_road: Галоўная дарога
           trunk: Шаша
           primary: Асноўная дарога
           secondary: Другасная дарога
@@ -1667,6 +1672,7 @@ be:
       allow_read_gpx: чытаць уласныя GPS-сляды.
       allow_write_gpx: адаслаць GPS-сляды.
       allow_write_notes: змяняць заўвагі.
+      grant_access: Прадастаўленне Доступу
     oauthorize_success:
       title: Запыт на аўтарызацыю дазволены
       allowed: Вы надалі дастасаванню %{app_name} доступ да вашага рахунка.
@@ -1813,7 +1819,7 @@ be:
     new:
       title: Стварыць рахунак
       no_auto_account_create: На жаль, мы не можам стварыць для вас рахунак аўтаматычна.
-      contact_webmaster: Калі ласка, спішыцеся з <a href="mailto:webmaster@openstreetmap.org">вэм-майстрам</a>
+      contact_webmaster: Калі ласка, спішыцеся з <a href="%{webmaster}">вэм-майстрам</a>
         каб стварыць вам рахунак - мы паспрабуем выдаць вам рахунак як мага хутчэй.
       about:
         header: Свабодная і даступная для рэдагавання
@@ -1867,6 +1873,7 @@ be:
       heading: Карыстальнік %{user} не існуе
       body: Прабачце, карыстальнік %{user} не знойдзены. Please check your spelling,
         Калі ласка, праверце свой правапіс, ці, магчыма, вам далі няправільную спасылку.
+      deleted: выдалены
     view:
       my diary: Мой дзённік
       new diary entry: новы запіс у дзённіку
@@ -1919,16 +1926,16 @@ be:
         revoke:
           administrator: Адклікаць доступ з правамі адміністратара
           moderator: Скасаваць доступ мадэратара
-      block_history: атрыманыя блакіроўкі
-      moderator_history: створаныя блакіроўкі
+      block_history: Дзейныя блакіроўкі
+      moderator_history: Створаныя блакіроўкі
       comments: Каментары
-      create_block: заблякаваць гэтага карыстальніка
-      activate_user: актывацыя гэтага карыстальніка
-      deactivate_user: адключыць гэтага карыстальніка
-      confirm_user: пацвердзіць гэтага карыстальніка
-      hide_user: схаваць гэтага карыстальніка
-      unhide_user: паказаць гэтага карыстальніка
-      delete_user: выдаліць гэтага карыстальніка
+      create_block: Заблакаваць гэтага карыстальніка
+      activate_user: Актываваць гэтага карыстальніка
+      deactivate_user: Дэактываваць гэтага карыстальніка
+      confirm_user: Пацвердзіць гэтага карыстальніка
+      hide_user: Схаваць гэтага карыстальніка
+      unhide_user: Паказаць гэтага карыстальніка
+      delete_user: Выдаліць гэтага карыстальніка
       confirm: Пацвердзіць
       friends_changesets: наборы зменаў сяброў
       friends_diaries: запісы дзёньнікаў сяброў
@@ -2014,9 +2021,8 @@ be:
       success: Мы даслалі новы ліст з пацверджаннем на адрас %{email} і, як толькі
         Вы пацвердзіце Ваш рахунак, Вы зможаце пачаць працаваць з картай.<br /><br
         />Калі Вы карыстаецеся сістэмай абароны ад спаму, якая дасылае запыты на пацверджанне,
-        калі ласка, упэўніцеся, што адрас  webmaster@openstreetmap.org знаходзіцца
-        ў Вашым давераным спісе, таму што мы не маем магчымасці адказваць на любыя
-        запыты.
+        калі ласка, упэўніцеся, што адрас %{sender} знаходзіцца ў Вашым давераным
+        спісе, таму што мы не маем магчымасці адказваць на любыя запыты.
       failure: Карыстальнік %{name} не знойдзены.
     confirm_email:
       heading: Пацвердзіць змену паштовага адраса
@@ -2071,6 +2077,13 @@ be:
       no_authorization_code: Няма кода аўтарызацыі
       unknown_signature_algorithm: Невядомы алгарытм подпісу
       invalid_scope: Няправільны дыяпазон
+    auth_association:
+      heading: Ваш ID пакуль што не звязаны з рахункам OpenStreetMap.
+      option_1: Калі вы пачатковец у ОСМ, калі ласка, стварыце новы ўліковы запіс
+        скарыстаўшыся формай ніжэй.
+      option_2: Калі ў вас ужо ёсць рахунак, то вы можаце ўвайсці ў свой рахунак выкарыстоўваючы
+        свой лагін і пароль і затым звязаць уліковы запіс з вашым ID ў вашых наладах
+        карыстальніка.
   user_role:
     filter:
       not_an_administrator: Толькі адміністратары могуць кіраваць ролямі карыстальнікаў,
@@ -2253,6 +2266,10 @@ be:
       center_marker: Цэнтраваць карту па маркеры
       paste_html: Уставіць HTML для ўбудовы ў вэб-сайт
       view_larger_map: Праглядзець большую карту
+      only_standard_layer: Толькі стандартны пласт можа быць экспартаваны ў выглядзе
+        выявы
+    embed:
+      report_problem: Паведаміць аб праблеме
     key:
       title: Умоўныя абазначэнні
       tooltip: Умоўныя абазначэнні
@@ -2263,7 +2280,7 @@ be:
         out: Паменшыць
       locate:
         title: Паказаць маё месцазнаходжанне
-        popup: Вы знаходзіцеся ў межах {distance} {unit} ад гэтай кропкі
+        popup: Вы знаходзіцеся ў межах {distance} {unit} ад гэтага пункта
       base:
         standard: Звычайная карта
         cycle_map: Веласіпедная карта
@@ -2318,6 +2335,9 @@ be:
         mapquest_car: Аўтамабіль (MapQuest)
         mapquest_foot: Пешаход (MapQuest)
         osrm_car: Аўтамабіль (OSRM)
+        mapzen_bicycle: Веласіпед (Mapzen)
+        mapzen_car: Аўтамабіль (Mapzen)
+        mapzen_foot: Пешшу (Mapzen)
       directions: Маршрут
       distance: Адлегласць
       errors:
@@ -2346,9 +2366,9 @@ be:
         courtesy: Маршрут прадастаўлены %{link}
       time: Час
     query:
-      node: Кропка
+      node: Пункт
       way: Лінія
-      relation: Адносіны
+      relation: Дачыненне
       nothing_found: Аб’екты не знойдзены
       error: 'Памылка сувязі з %{server}: %{error}'
       timeout: Тайм-аўт падключэння да %{server}

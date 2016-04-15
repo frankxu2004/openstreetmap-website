@@ -2,6 +2,7 @@
 # Exported from translatewiki.net
 # Export driver: phpyaml
 # Author: Bjankuloski06
+# Author: Macofe
 # Author: Nemo bis
 ---
 mk:
@@ -1829,8 +1830,8 @@ mk:
       title: Регистрација
       no_auto_account_create: За жал, моментално не можеме автоматски да ви создадеме
         сметка.
-      contact_webmaster: Контактирајте го <a href="mailto:webmaster@openstreetmap.org">управникот</a>
-        за да побарате создавање на сметка - ќе се потрудиме да ве услужиме во најкраток
+      contact_webmaster: Контактирајте го <a href="%{webmaster}">управникот</a> за
+        да побарате создавање на сметка - ќе се потрудиме да ве услужиме во најкраток
         можен рок.
       about:
         header: Слободна и уредлива
@@ -1939,16 +1940,16 @@ mk:
         revoke:
           administrator: Лиши од администраторски пристап
           moderator: Лиши од модераторски пристап
-      block_history: примени блокови
-      moderator_history: дадени блокови
+      block_history: Активни блокови
+      moderator_history: Зададени блокови
       comments: Коментари
-      create_block: блокирај го корисников
-      activate_user: активирај го корисников
-      deactivate_user: деактивирај го корисников
-      confirm_user: потврди го корисников
-      hide_user: скриј го корисников
-      unhide_user: покажи го корисникот
-      delete_user: избриши го корисников
+      create_block: Блокирај го корисников
+      activate_user: Активирај го корисников
+      deactivate_user: Деактивирај го корисников
+      confirm_user: Потврди го корисников
+      hide_user: Скриј го корисников
+      unhide_user: Покажи го корисников
+      delete_user: Избриши го корисников
       confirm: Потврди
       friends_changesets: измени на пријателите
       friends_diaries: дневнички записи на пријателите
@@ -2038,8 +2039,7 @@ mk:
       success: Испративме поврдна порака на %{email}, и штом ќе ја потврдите сметката,
         ќе можете да почнете со картографска работа.<br /><br />Ако користите систем
         против спам кој испраќа барања за потврда, тогаш ќе морате да ја дозволите
-        адресата webmaster@openstreetmap.org бидејќи ние немаме начин да одговараме
-        на такви потврди.
+        адресата %{sender} бидејќи ние немаме начин да одговараме на такви потврди.
       failure: Корисникот %{name} не е пронајден.
     confirm_email:
       heading: Потврди промена на е-пошта
@@ -2282,6 +2282,9 @@ mk:
       center_marker: Сосред. картата на бележникот
       paste_html: Ископирајте го HTML-кодот за да го вметнете во страницата.
       view_larger_map: Преглед на поголема карта
+      only_standard_layer: Само стандардниот слој може да се извезува како слика
+    embed:
+      report_problem: Пријави проблем
     key:
       title: Легенда
       tooltip: Легенда

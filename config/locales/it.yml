@@ -954,7 +954,7 @@ it:
         towns: Città
         places: Luoghi
     results:
-      no_results: Nessun risultato
+      no_results: Nessun risultato trovato
       more_results: Altri risultati
   layouts:
     logo:
@@ -1864,8 +1864,8 @@ it:
       title: Registrati
       no_auto_account_create: Sfortunatamente in questo momento non è possibile creare
         automaticamente per te un profilo.
-      contact_webmaster: Si prega di contattare il <a href="mailto:webmaster@openstreetmap.org">webmaster</a>
-        affinchè faccia in modo di creare un profilo. Tenteremo di soddisfare la richiesta
+      contact_webmaster: Si prega di contattare il <a href="%{webmaster}">webmaster</a>
+        affinché faccia in modo di creare un profilo. Tenteremo di soddisfare la richiesta
         il più rapidamente possibile.
       about:
         header: Libero ed editabile
@@ -1973,16 +1973,16 @@ it:
         revoke:
           administrator: Revoca l'accesso come amministratore
           moderator: Revoca l'accesso come moderatore
-      block_history: blocchi ricevuti
-      moderator_history: blocchi applicati
+      block_history: Blocchi attivi
+      moderator_history: Blocchi applicati
       comments: Commenti
-      create_block: blocca questo utente
-      activate_user: attiva questo utente
-      deactivate_user: disattiva questo utente
-      confirm_user: conferma questo utente
-      hide_user: nascondi questo utente
-      unhide_user: mostra questo utente
-      delete_user: elimina questo utente
+      create_block: Blocca questo utente
+      activate_user: Attiva questo utente
+      deactivate_user: Disattiva questo utente
+      confirm_user: Conferma questo utente
+      hide_user: Nascondi questo utente
+      unhide_user: Mostra questo utente
+      delete_user: Cancella questo utente
       confirm: Conferma
       friends_changesets: gruppi di modifiche degli amici
       friends_diaries: note dei diari degli amici
@@ -2070,8 +2070,8 @@ it:
       success: È stato spedito un nuovo messaggio di conferma all'indirizzo %{email}
         e non appena verrà confermato il proprio profilo si sarà in grado di mappare.<br
         /><br />Se si utilizzano dei filtri antispam che spediscono richieste di conferma
-        assicurarsi di inserire l'indirizzo webmaster@openstreetmap.org nella whitelist,
-        altrimenti non siamo in grado di rispondere ad alcuna richiesta di conferma.
+        assicurarsi di inserire l'indirizzo %{sender} nella whitelist, altrimenti
+        non siamo in grado di rispondere ad alcuna richiesta di conferma.
       failure: Utente %{name} non trovato.
     confirm_email:
       heading: Conferma una variazione di indirizzo email
@@ -2312,6 +2312,9 @@ it:
       center_marker: Centra la mappa sul marcatore
       paste_html: Incolla l'HTML per incorporarlo nel sito web
       view_larger_map: Visualizza mappa ingrandita
+      only_standard_layer: Solo il livello standard può essere esportato come immagine
+    embed:
+      report_problem: Segnala un problema
     key:
       title: Legenda
       tooltip: Legenda

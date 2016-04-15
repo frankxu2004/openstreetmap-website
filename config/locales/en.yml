@@ -1767,7 +1767,7 @@ en:
     new:
       title: "Sign Up"
       no_auto_account_create: "Unfortunately we are not currently able to create an account for you automatically."
-      contact_webmaster: 'Please contact the <a href="mailto:webmaster@openstreetmap.org">webmaster</a> to arrange for an account to be created - we will try and deal with the request as quickly as possible.'
+      contact_webmaster: 'Please contact the <a href="%{webmaster}">webmaster</a> to arrange for an account to be created - we will try and deal with the request as quickly as possible.'
       about:
         header: Free and editable
         html: |
@@ -1861,16 +1861,16 @@ en:
         revoke:
           administrator: "Revoke administrator access"
           moderator: "Revoke moderator access"
-      block_history: "blocks received"
-      moderator_history: "blocks given"
+      block_history: "Active Blocks"
+      moderator_history: "Blocks Given"
       comments: "Comments"
-      create_block: "block this user"
-      activate_user: "activate this user"
-      deactivate_user: "deactivate this user"
-      confirm_user: "confirm this user"
-      hide_user: "hide this user"
-      unhide_user: "unhide this user"
-      delete_user: "delete this user"
+      create_block: "Block this User"
+      activate_user: "Activate this User"
+      deactivate_user: "Deactivate this User"
+      confirm_user: "Confirm this User"
+      hide_user: "Hide this User"
+      unhide_user: "Unhide this User"
+      delete_user: "Delete this User"
       confirm: "Confirm"
       friends_changesets: "friends' changesets"
       friends_diaries: "friends' diary entries"
@@ -1944,7 +1944,7 @@ en:
       unknown token: "That confirmation code has expired or does not exist."
       reconfirm_html: "If you need us to resend the confirmation email, <a href=\"%{reconfirm}\">click here</a>."
     confirm_resend:
-      success: "We've sent a new confirmation note to %{email} and as soon as you confirm your account you'll be able to get mapping.<br /><br />If you use an antispam system which sends confirmation requests then please make sure you whitelist webmaster@openstreetmap.org as we are unable to reply to any confirmation requests."
+      success: "We've sent a new confirmation note to %{email} and as soon as you confirm your account you'll be able to get mapping.<br /><br />If you use an antispam system which sends confirmation requests then please make sure you whitelist %{sender} as we are unable to reply to any confirmation requests."
       failure: "User %{name} not found."
     confirm_email:
       heading: Confirm a change of email address
@@ -2172,6 +2172,9 @@ en:
       center_marker: "Center map on marker"
       paste_html: "Paste HTML to embed in website"
       view_larger_map: "View Larger Map"
+      only_standard_layer: "Only the standard layer can be exported as an image"
+    embed:
+      report_problem: "Report a problem"
     key:
       title: "Map Key"
       tooltip: "Map Key"

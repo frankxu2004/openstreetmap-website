@@ -21,6 +21,7 @@
 # Author: Paxt
 # Author: Reaperman
 # Author: Tchoř
+# Author: Urbanecm
 # Author: Veritaslibero
 ---
 cs:
@@ -1821,7 +1822,7 @@ cs:
       title: Zaregistrovat se
       no_auto_account_create: Bohužel za vás momentálně nejsme schopni vytvořit účet
         automaticky.
-      contact_webmaster: Pokud chcete zařídit založení účtu, kontaktujte <a href="mailto:webmaster@openstreetmap.org">webmastera</a>
+      contact_webmaster: Pokud chcete zařídit založení účtu, kontaktujte <a href="%{webmaster}">webmastera</a>
         – pokusíme se vaši žádost vyřídit co možná nejrychleji.
       about:
         header: Svobodná a editovatelná
@@ -1927,16 +1928,16 @@ cs:
         revoke:
           administrator: Odebrat práva správce
           moderator: Odebrat práva moderátora
-      block_history: zablokování
-      moderator_history: udělená zablokování
+      block_history: Účinná zablokování
+      moderator_history: Udělená zablokování
       comments: Komentáře
-      create_block: blokovat tohoto uživatele
-      activate_user: aktivovat tohoto uživatele
-      deactivate_user: deaktivovat tohoto uživatele
-      confirm_user: potvrdit tohoto uživatele
-      hide_user: skrýt tohoto uživatele
-      unhide_user: zobrazit tohoto uživatele
-      delete_user: odstranit tohoto uživatele
+      create_block: Blokovat tohoto uživatele
+      activate_user: Aktivovat tohoto uživatele
+      deactivate_user: Deaktivovat tohoto uživatele
+      confirm_user: Potvrdit tohoto uživatele
+      hide_user: Skrýt tohoto uživatele
+      unhide_user: Zobrazit tohoto uživatele
+      delete_user: Odstranit tohoto uživatele
       confirm: Potvrdit
       friends_changesets: sady změn přátel
       friends_diaries: záznamy v deníčcích přátel
@@ -2024,8 +2025,7 @@ cs:
       success: Poslali jsme na %{email} novou potvrzovací zprávu, jakmile potvrdíte
         svůj účet, budete moci začít tvořit mapy.<br /><br />Pokud používáte nějaký
         protispamový systém, který vyžaduje potvrzení, nezapomeňte zařídit výjimku
-        pro webmaster@openstreetmap.org, neboť na žádosti o potvrzení nejsme schopni
-        reagovat.
+        pro %{sender}, neboť na žádosti o potvrzení nejsme schopni reagovat.
       failure: Uživatel %{name} nebyl nalezen.
     confirm_email:
       heading: Potvrzení změny e-mailové adresy
@@ -2263,6 +2263,9 @@ cs:
       center_marker: Vycentrovat mapu na značku
       paste_html: HTML ke vložení na webovou stránku
       view_larger_map: Zobrazit větší mapu
+      only_standard_layer: Jako obrázek lze exportovat jen standardní vrstvu
+    embed:
+      report_problem: Nahlásit problém
     key:
       title: Legenda
       tooltip: Legenda

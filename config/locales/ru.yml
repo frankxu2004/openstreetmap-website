@@ -29,12 +29,14 @@
 # Author: Kaganer
 # Author: Komzpa
 # Author: Lockal
+# Author: Macofe
 # Author: MaxSem
 # Author: Mechano
 # Author: Mixaill
 # Author: Nemo bis
 # Author: Nzeemin
 # Author: Okras
+# Author: Perevod16
 # Author: Putnik
 # Author: Riliam
 # Author: Ruila
@@ -1157,6 +1159,12 @@ ru:
         название ресторана или скоростное ограничение конкретной дороги.
     rules:
       title: Правила!
+      paragraph_1_html: В OpenStreetMap есть лишь несколько формальных правил, но
+        мы бы хотели, чтоб все участники сотрудничали и взаимодействовали с сообществом.
+        Если речь идёт о любых действиях, кроме редактирования вручную, пожалуйста,
+        прочитайте рекомендацияи по <a href="http://wiki.openstreetmap.org/wiki/Import/Guidelines">импорту</a>
+        и <a href="http://wiki.openstreetmap.org/wiki/Automated_Edits_code_of_conduct">автоматизированным
+        правкам</a> и следуйте им в дальнейшем.
     questions:
       title: Появились вопросы?
       paragraph_1_html: |-
@@ -1872,7 +1880,7 @@ ru:
       title: Регистрация
       no_auto_account_create: К сожалению, сейчас мы не можем автоматически создать
         для вас учётную запись.
-      contact_webmaster: Пожалуйста, свяжитесь с <a href="mailto:webmaster@openstreetmap.org">вебмастером</a>
+      contact_webmaster: Пожалуйста, свяжитесь с <a href="%{webmaster}">вебмастером</a>
         с просьбой создать подобную учётную запись. Мы попробуем и ответим настолько
         быстро, насколько сможем.
       about:
@@ -1927,6 +1935,7 @@ ru:
       heading: Пользователя %{user} не существует
       body: Извините, нет пользователя с именем %{user}. Пожалуйста, проверьте правильность
         ввода. Возможно, вы перешли по ошибочной ссылке.
+      deleted: удалено
     view:
       my diary: Мой дневник
       new diary entry: новая запись
@@ -1981,16 +1990,16 @@ ru:
         revoke:
           administrator: Отозвать права администратора
           moderator: Отозвать права модератора
-      block_history: полученные блокировки
+      block_history: Активные Блоки
       moderator_history: созданные блокировки
       comments: Комментарии
-      create_block: блокировать пользователя
-      activate_user: активировать этого пользователя
-      deactivate_user: деактивировать этого пользователя
-      confirm_user: подтвердить этого пользователя
-      hide_user: скрыть этого пользователя
-      unhide_user: отобразить этого пользователя
-      delete_user: удалить этого пользователя
+      create_block: Блокировать участника
+      activate_user: активировать пользователя
+      deactivate_user: деактивировать пользователя
+      confirm_user: подтвердить пользователя
+      hide_user: скрыть пользователя
+      unhide_user: отобразить пользователя
+      delete_user: удалить пользователя
       confirm: Подтвердить
       friends_changesets: наборы правок друзей
       friends_diaries: дневники друзей
@@ -2079,8 +2088,8 @@ ru:
       success: Мы выслали новое письмо с подтверждением на адрес %{email}, и как только
         вы подтвердите вашу учётную запись, вы можете начать работать с картами.<br
         /><br />Если вы используете антиспам-систему, посылающую запросы на подтверждение,
-        пожалуйста, внесите адрес webmaster@openstreetmap.org в ваш белый список,
-        так как мы не можем отвечать на такие запросы.
+        пожалуйста, внесите адрес %{sender} в ваш белый список, так как мы не можем
+        отвечать на такие запросы.
       failure: Участник %{name} не найден.
     confirm_email:
       heading: Подтвердите изменение адреса электронной почты
@@ -2136,6 +2145,7 @@ ru:
       invalid_credentials: Недопустимые учётные данные для аутентификации
       no_authorization_code: Нет кода авторизации
       unknown_signature_algorithm: Неизвестный алгоритм подписи
+      invalid_scope: Недопустимый масштаб
     auth_association:
       heading: Ваш ID пока ещё не связан с учётной записью OpenStreetMap.
       option_1: Если вы впервые на OpenStreetMap, пожалуйста, создайте новую учётную
@@ -2328,6 +2338,10 @@ ru:
       center_marker: Центрировать карту на маркер
       paste_html: HTML-код для встраивания на сайт
       view_larger_map: Посмотреть более крупную карту
+      only_standard_layer: Только стандартный слой может быть экспортирован в виде
+        изображения
+    embed:
+      report_problem: Сообщить о проблеме
     key:
       title: Легенда карты
       tooltip: Условные знаки
@@ -2418,6 +2432,7 @@ ru:
         leave_roundabout_without_exit: Покиньте развязку - %{name}
         stay_roundabout_without_exit: Оставайтесь на развязке - %{name}
         start_without_exit: Начните в конце %{name}
+        destination_without_exit: Выбрать место назначения
         against_oneway_without_exit: Идите против одностороннего движения на %{name}
         end_oneway_without_exit: Конец одностороннего движения на %{name}
         roundabout_with_exit: На развязке выберите выход %{exit} на %{name}
